@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.GridPane?>
+
+<!--TitleBar-->
+<GridPane fx:id="titleBar" onMousePressed="#handleTitleBarClickAction" onMouseDragged="#handleTitleBarMovementAction"
+          GridPane.rowIndex="0" xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.endlessquest.endlessquest.Controller">
+
+    <!--Icon-->
+    <ImageView GridPane.columnIndex="0" fitWidth="30" fitHeight="30">
+        <image>
+            <Image url="@../../../UI/icon.png"/>
+        </image>
+    </ImageView>
+
+    <!--Title-->
+    <Label text="Endless Quest" GridPane.columnIndex="1"/>
+
+    <GridPane fx:id="flags" GridPane.columnIndex="2">
+        <!-- French Flag -->
+        <ImageView fx:id="FrenchPicture" GridPane.columnIndex="0" fitWidth="20" fitHeight="20"
+                   onMouseClicked="#handleLanguageChange">
+            <image>
+                <Image url="@../../../UI/french.png"/>
+            </image>
+        </ImageView>
+
+        <!-- English Flag -->
+        <ImageView fx:id="AnglaisPicture" GridPane.columnIndex="1" fitWidth="20" fitHeight="20"
+                   onMouseClicked="#handleLanguageChange">
+            <image>
+                <Image url="@../../../UI/english.png"/>
+            </image>
+        </ImageView>
+    </GridPane>
+
+    <!--Minimize Button-->
+    <Button fx:id="minBtn" onAction="#handleMinimizedAction" text="-" GridPane.columnIndex="3"/>
+
+    <!--Exit Button-->
+    <Button fx:id="closeBtn" onAction="#handleCloseAction" text="X" GridPane.columnIndex="4"/>
+</GridPane>

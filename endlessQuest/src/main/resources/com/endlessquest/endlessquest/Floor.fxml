@@ -1,0 +1,67 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<?import javafx.scene.control.Label?>
+<?import java.lang.Boolean?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Box?>
+<GridPane fx:id="MainScene" prefWidth="1350" prefHeight="760" fx:controller="com.endlessquest.endlessquest.FloorController"
+          xmlns:fx="http://javafx.com/fxml">
+
+    <!--    title bar-->
+    <fx:include source="TitleBar.fxml"/>
+
+    <!--Background-->
+    <GridPane GridPane.rowIndex="1">
+        <ImageView fx:id="backgroundImg" fitWidth="1350" fitHeight="730">
+        </ImageView>
+    </GridPane>
+
+    <GridPane styleClass="FightUi" fx:id="floorActionUi" GridPane.rowIndex="1" GridPane.columnIndex="0" prefHeight="730" prefWidth="1350">
+        <!--FullWidthBox-->
+        <GridPane styleClass="BoxUi" fx:id="floorInfo" prefHeight="150" prefWidth="1350" GridPane.rowIndex="1" GridPane.columnIndex="0" >
+            <Label text="Get ready for a challenging battle! The following enemies approach:"  GridPane.rowIndex="0" GridPane.columnIndex="0"></Label>
+            <GridPane fx:id="floorInfoLabels" GridPane.rowIndex="1" GridPane.columnIndex="0">
+
+            </GridPane>
+        </GridPane>
+
+        <!--floorAction-->
+        <GridPane styleClass="BoxUi" fx:id="floorAction" prefHeight="150" prefWidth="800" maxWidth="900" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.halignment="RIGHT">
+            <Label text="Ability" styleClass="ActionTitle" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.halignment="LEFT"></Label>
+
+            <GridPane styleClass="BoxList" prefHeight="1000" GridPane.rowIndex="1" GridPane.columnIndex="0" >
+
+            </GridPane>
+        </GridPane>
+
+        <!--FullWidthBox-->
+        <GridPane styleClass="BoxUi" fx:id="floorActionMenu" prefHeight="150" prefWidth="1350" maxWidth="400" GridPane.rowIndex="1" GridPane.columnIndex="0" >
+                <Label text="Hero" fx:id="HeroName" GridPane.rowIndex="0" GridPane.columnIndex="0"></Label>
+
+                <GridPane GridPane.rowIndex="1" GridPane.columnIndex="0">
+                    <Label text="Attack" GridPane.rowIndex="0" GridPane.columnIndex="0" onMouseClicked="#actionAttack"></Label>
+                    <Label text="Abilities" GridPane.rowIndex="0" GridPane.columnIndex="1" onMouseClicked="#actionAbility"></Label>
+                    <Label text="Spells" GridPane.rowIndex="1" GridPane.columnIndex="0"></Label>
+                    <Label text="Items" GridPane.rowIndex="1" GridPane.columnIndex="1"></Label>
+                </GridPane>
+        </GridPane>
+
+        <!--FullWidthBox-->
+        <GridPane styleClass="BoxUi" fx:id="floorEnemies" prefHeight="150" prefWidth="800" maxWidth="900" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.halignment="RIGHT">
+            <Label text="Attack" styleClass="ActionTitle" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.halignment="LEFT"></Label>
+
+            <GridPane styleClass="BoxList" fx:id="floorEnemiesLabels" GridPane.rowIndex="1" GridPane.columnIndex="0">
+
+            </GridPane>
+        </GridPane>
+
+
+
+    </GridPane>
+
+</GridPane>

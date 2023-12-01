@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+*{
+    -fx-text-fill: #fff;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-font-family: 'VT323', sans-serif;
+}
+
+/* title bar */
+#titleBar{
+    -fx-background-color: #000;
+    -fx-pref-width: 1350px;
+    -fx-pref-height: 30px;
+
+}
+
+#flags{
+    -fx-hgap: 15px;
+
+}
+
+#flags>*:hover{
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+    -fx-scale-z: 0.9;
+}
+
+#titleBar > .label{
+    -fx-alignment: baseline-left;
+    -fx-font-weight: 700;
+    -fx-pref-width: 1350px;
+    -fx-font-size: 20px;
+    -fx-text-fill:#fff;
+}
+
+#titleBar > .button{
+    -fx-font-size: 20px;
+    -fx-pref-height: 30px;
+    -fx-text-fill:#fff;
+    -fx-background-color: #000;
+
+}
+
+#closeBtn:hover{
+    -fx-text-fill: red !important;
+}
+
+#minBtn:hover{
+    -fx-text-fill: #c0a371 !important;
+}
+
+/* menu */
+#mainMenu{
+    -fx-translate-y: 50px;
+    -fx-vgap: 15px;
+    -fx-pref-width: 1350px;
+}
+
+#classMenu{
+    -fx-pref-width: 1350px;
+}
+
+#classMenuTitle{
+    -fx-font-size: 35px;
+    -fx-translate-x: 50%;
+    -fx-translate-y: 65px;
+}
+
+#classChoice{
+    -fx-hgap: 215px;
+}
+
+#classChoice>*:hover{
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+    -fx-scale-z: 0.9;
+}
+
+#classChoiceTitle{
+    -fx-font-size: 35px;
+    -fx-text-fill: #fff;
+    -fx-pref-width: 1350px;
+    -fx-translate-y:100px ;
+}
+
+#classLore{
+    -fx-text-fill: #fff;
+    -fx-font-size: 25px;
+    -fx-pref-width: 1000px;
+}
+
+#classTitle{
+    -fx-font-size: 35px;
+    -fx-text-fill: #fff;
+    -fx-pref-width: 1350px;
+}
+
+#lorePage{
+    -fx-translate-y: 50px;
+    -fx-alignment: top-center;
+    -fx-vgap: 300px;
+}
+
+
+#lorePageHeader>ImageView:hover{
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+    -fx-scale-z: 0.9;
+}
+
+#mainMenu > .button{
+    -fx-font-size: 40px;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 60px;
+    -fx-text-fill: #c0a371;
+    -fx-background-color: transparent
+
+}
+
+#mainMenu > .button:hover{
+    -fx-text-fill: #fff;
+}
+
+
+
+.FightUi{
+    -fx-alignment: bottom-center;
+    -fx-padding: 16px 16px 19px 16px;
+}
+
+
+#HeroName{
+    -fx-font-size: 30;
+    -fx-border-color: #8692a0; /* You can set the color of the border */
+    -fx-border-width: 0 0 2 0; /* 1 pixel border only at the bottom */
+    -fx-pref-width: 1000;
+
+}
+
+#floorActionMenu>GridPane>Label{
+    -fx-pref-width: 1000;
+    -fx-pref-height: 1000;
+    -fx-opacity: 0.75;
+    -fx-vgap: 16px;
+
+}
+
+#floorActionMenu>GridPane>Label:hover{
+    -fx-pref-width: 1000;
+    -fx-pref-height: 1000;
+    -fx-opacity: 1;
+
+}
+
+#floorInfoLabels{
+    -fx-pref-width: 2000;
+    -fx-pref-height: 1000;
+    -fx-alignment: top-left;
+
+}
+
+.selection{
+    -fx-opacity: 0.75;
+
+}
+
+.selection:hover{
+    -fx-opacity: 1;
+}
+
+#floorEnemies{
+    -fx-alignment: top-left;
+}
+
+#floorInfo{
+    -fx-vgap: 16px;
+
+}
+
+.BoxUi{
+    -fx-background-color: rgba(22, 39, 58, 0.7);
+    -fx-border-color: #8692a0;
+    -fx-border-width: 3px;
+    -fx-font-size: 25;
+    -fx-padding: 16px;
+}
+
+.BoxList{
+    -fx-pref-width: 1350;
+    -fx-alignment: CENTER_LEFT;
+    -fx-vgap: 4px;
+    -fx-border-color: #8692a0; /* You can set the color of the border */
+    -fx-border-width: 2 0 0 0; /* 1 pixel border only at the bottom */
+    -fx-padding: 8px 0 0 0 ;
+
+}
+
+
+
+.
+
+.ActionTitle{
+    -fx-font-size: 30;
+    -fx-alignment: center-left;
+    -fx-pref-width: 1000;
+}

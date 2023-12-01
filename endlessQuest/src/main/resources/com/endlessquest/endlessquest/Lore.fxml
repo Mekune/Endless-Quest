@@ -1,0 +1,53 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<?import javafx.scene.control.Label?>
+<?import java.lang.Boolean?>
+<GridPane prefWidth="1350" prefHeight="760" fx:controller="com.endlessquest.endlessquest.LoreController"
+          xmlns:fx="http://javafx.com/fxml">
+
+    <!--    title bar-->
+    <fx:include source="TitleBar.fxml"/>
+
+    <!--Background-->
+    <GridPane GridPane.rowIndex="1">
+        <ImageView fx:id="backgroundImg" fitWidth="1350" fitHeight="730">
+            <image>
+                <Image url="@../../../background/lore.gif"/>
+            </image>
+        </ImageView>
+    </GridPane>
+
+    <!--page-->
+    <GridPane fx:id="lorePage" GridPane.rowIndex="1" maxWidth="1200" GridPane.halignment="CENTER">
+
+        <GridPane fx:id="lorePageHeader" GridPane.rowIndex="0" GridPane.columnIndex="0" >
+            <ImageView fx:id="backClassChoice" fitWidth="50" fitHeight="50" GridPane.rowIndex="0" GridPane.columnIndex="0" onMouseClicked="#handleBackClassChoice">
+                <image>
+                    <Image url="@../../../UI/arrowLeft.png"/>
+                </image>
+            </ImageView>
+
+            <Label text="Class"  fx:id="classTitle" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+            <ImageView fitWidth="50" fitHeight="50" GridPane.rowIndex="0" GridPane.columnIndex="2" onMouseClicked="#startGame">
+                <image>
+                    <Image url="@../../../UI/arrowRight.png"/>
+                </image>
+            </ImageView>
+        </GridPane>
+
+
+
+        <!--Menu Title-->
+        <Label fx:id="classLore" GridPane.rowIndex="1" GridPane.columnIndex="0" text="The Magi, long marginalized and misunderstood for their mysterious powers, have discovered that the tower is a link between worlds. Convinced that the key to understanding the secrets of the cosmos lies at the top of the tower, the Erudits of the Ethereal Arcanum set out on a perilous journey. Their goal is to master the primordial energies that permeate every floor of the tower, and thus unlock the true nature of reality. Rumors suggest that the tower itself may be an ancient magical artifact, waiting to be awakened by skilled hands."
+               GridPane.halignment="CENTER">
+            <wrapText>
+                <Boolean fx:value="true"/>
+            </wrapText>
+        </Label>
+    </GridPane>
+</GridPane>

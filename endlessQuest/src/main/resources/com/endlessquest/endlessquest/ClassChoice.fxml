@@ -1,0 +1,55 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<GridPane prefWidth="1350" prefHeight="760" fx:controller="com.endlessquest.endlessquest.ClassChoiceController"
+          xmlns:fx="http://javafx.com/fxml">
+
+    <!--    title bar-->
+    <fx:include source="TitleBar.fxml"/>
+
+
+    <!--Background-->
+    <GridPane GridPane.rowIndex="1">
+        <ImageView fx:id="backgroundImg" fitWidth="1350" fitHeight="730">
+            <image>
+                <Image url="@../../../background/classChoice.png"/>
+            </image>
+        </ImageView>
+    </GridPane>
+
+    <Label text="Choose your class"  fx:id="classChoiceTitle"/>
+
+    <!--page-->
+    <GridPane GridPane.rowIndex="1" fx:id="classChoice" GridPane.halignment="CENTER">
+<!--        wizard-->
+        <ImageView fx:id="wizardClass" fitWidth="150" fitHeight="150" GridPane.columnIndex="0" onMouseClicked="#handleWizardClass">
+            <image>
+                <Image url="@../../../UI/wizardClass.png"/>
+            </image>
+        </ImageView>
+
+<!--        warrior-->
+        <ImageView fx:id="warriorClass" fitWidth="150" fitHeight="150" GridPane.columnIndex="1" onMouseClicked="#handleKnightClass">
+            <image>
+                <Image url="@../../../UI/knightClass.png"/>
+            </image>
+        </ImageView>
+
+<!--        archer-->
+        <ImageView fx:id="archerClass" fitWidth="150" fitHeight="150" GridPane.columnIndex="2" onMouseClicked="#handleArcherClass">
+            <image>
+                <Image url="@../../../UI/archerClass.png"/>
+            </image>
+        </ImageView>
+
+
+    </GridPane>
+
+
+</GridPane>
